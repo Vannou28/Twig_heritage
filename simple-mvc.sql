@@ -19,7 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `simple-mvc`
 --
-
+CREATE DATABASE  IF NOT EXISTS `simple-mvc` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `simple-mvc`;
 -- --------------------------------------------------------
 
 --

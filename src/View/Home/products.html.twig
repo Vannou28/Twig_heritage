@@ -1,0 +1,33 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Hello Wilder !</h1>
+    <h2>Version ac Bootstrap</h2>
+    <div class='container-fluid '>
+        <div class="row">
+            {%for product in products %}
+                <div class="col-4">
+                    {{product}}
+                </div>
+            {%endfor%}  
+        </div>
+    </div>
+    <br>
+    <h2>Version avec un tableau en HTML </h2>
+    <table>
+        <tbody>
+            <tr>
+            {%for product in products %}
+                {%if loop.index is divisible by(3) %} 
+                    <td>{{product}}</td></tr>
+                    <tr>
+                {%else%}
+                    <td>{{product}}</td>
+                {%endif%}
+            {%endfor%}
+            </tr>
+        </tbody>
+    </table>
+    <h2>Dump du tableau</h2>
+    {{dump(products)}}
+{% endblock %}
