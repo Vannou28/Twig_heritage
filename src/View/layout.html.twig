@@ -5,15 +5,41 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Twig is a modern template engine for PHP {% endblock %}</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
+    
     {% block stylesheet %}{% endblock %}
+    
     <link rel="icon" href="/assets/images/favicon.png">
 </head>
 
 <body>
+     {% block navBar %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/showProducts">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Item/index">Items</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    {% endblock %}
+
     {% block content %}{% endblock %}
+
     {% block javascript %}{% endblock %}
 
 

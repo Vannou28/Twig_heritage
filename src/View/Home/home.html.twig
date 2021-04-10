@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %} {{parent()}} -Accueil {% endblock %}
+
+{% block content %}
+    <h1>Twig - Héritage et inclusion</h1>
+    <p>
+        <ul>
+            <li>Modifie le <em>layout</em> pour avoir un <em>title</em> par défaut</li>
+            <li>Crées une page <em>home.html.twig</em> qui étend du <em>layout.html.twig</em></li>
+            <li>Cette page utilisera le titre parent et ajoutera "- Accueil"</li>
+            <li>Créé un composant pour une navbar (ne t’embête pas avec la mise en forme pour cette quête) et inclus le dans ton fichier <em>home.html.twig</em></li>
+            <li>Envoie le résultat sur ton dépôt GitHub et poste le lien en solution</li>
+        </ul>
+    </p>
+{% endblock %}
